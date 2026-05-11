@@ -3,18 +3,18 @@ import './App.css';
 import Button from './components/button/button';
 import { useState } from 'react';
 import Input from './components/input/input';
+import Heading from './components/headings/heading';
 
 function App() {
-  const [age, setAge] = useState(10)
+
   return (
 
     <>
-   <div className='container'>
-    <h1>Login</h1>
-    <Input />
-    <Input/>
-    <Button/>
-   </div>
+  <Heading name="sayyami" age={18}/>
+
+  <Heading name="anamika" age={21}/>
+
+  <Heading name="ravina" age={17}/>
     </>
   );
 }
