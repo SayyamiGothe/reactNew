@@ -1,20 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
-import Button from './components/button/button';
-import { useState } from 'react';
-import Input from './components/input/input';
-import Heading from './components/headings/heading';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './components/pages/home';
+import Contact from './components/pages/contact';
+import About from './components/pages/about';
+
 
 function App() {
 
   return (
 
     <>
-  <Heading name="sayyami" age={18}/>
 
-  <Heading name="anamika" age={21}/>
+<BrowserRouter>
 
-  <Heading name="ravina" age={17}/>
+<Routes>
+
+<Route  path='/' element={<Home/>} />
+
+<Route  path='/contact' element={<Contact/>}/>
+
+<Route path='/about' element={<About/>}/>
+
+
+
+
+</Routes>
+
+
+</BrowserRouter>
+
+
     </>
   );
 }
