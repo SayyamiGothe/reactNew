@@ -1,19 +1,29 @@
-import { Button } from "bootstrap"
-import { Link } from "react-router-dom"
-
 function Home() {
-    return (
 
-        <>
+  const shoppingItems = [
+    {
+      name: "Wireless Headphones",
+      price: 2499,
+      image: "https://dummyimage.com/300x300/000/fff&text=Wireless+Headphones"
+    },
+    {
+      name: "Smart Watch",
+      price: 3999,
+      image: "https://dummyimage.com/300x300/000/fff&text=Smart+Watch"
+    }
+  ];
 
-            <h2>This is homepage</h2>
-
-            <button>
-                <Link to={'/about'}>ABOUT</Link>
-            </button>
-
-        </>
-    )
+  return (
+    <>
+      {shoppingItems.map((item) => (
+        <div>
+          <h2>{item.name}</h2>
+          <img src={item.image} height={100} alt={item.name} />
+          <h6>Price: ₹{item.price}</h6>
+        </div>
+      ))}
+    </>
+  );
 }
 
-export default Home
+export default Home;
